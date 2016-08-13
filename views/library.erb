@@ -5,21 +5,13 @@
   <ul><% @albums.each do |album| %>
     <% if artist.id == album.artist_id %>
       <li><%= album.name %></li>
+      <p><b>Stock:</b> 
+      <ul><% @stocks.each do |stock| %>
+        <% if album.id == stock.album_id %>
+          <li><p><%= stock.format %> | <%= stock.stock_level %> | <%= stock.threshold  %> | <%= stock.buy_price %> | <%= stock.sell_price %></li>
+        <% end %></p>
     <% end %></p>
   <% end %>
 </ul>
-  <form action="/album/new" method="post">
-    <input type="text" name="name">
-      <select name="artist_id" style='display:none'>
-        <option value="<%= artist.id %>"><%= artist.name %></option>
-      </select>
-    <input type='submit' value="Add Album">
-  </form>
-
-  <hr>
+<hr>
 <% end %>
-
-<form action="/artist/new" method="post">
-  <input type="text" name="name">
-  <input type='submit' value="Add Artist">
-</form>

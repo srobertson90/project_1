@@ -40,33 +40,7 @@ h3 {
   color: #ffffff;
 }
 
-.left {
-  opacity: 0.8;
-  position: relative;
-  margin-left: 7%;
-  float: left;
-  width: 12%;
-  height: 850px;
-  background-color: #000000;
-  margin-bottom: 10px;
-}
-
-.left h1 {
-  margin-top: 70px;
-  text-align: center;
-  position: relative;
-  font-family: Garamond, serif;
-  color: #000000;
-}
-
-.left p {
-  margin-top: 10px;
-  text-align: center;
-  font-family: Garamond, serif;
-  color: #ffffff;
-}
-
-.right {
+.main {
   opacity: 0.80;
   position: relative;
   float: left;
@@ -78,7 +52,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-.right form {
+.main form {
   opacity: 1;
   margin-left: 10px;
   margin-right: 10px;
@@ -87,7 +61,7 @@ h3 {
   color: #000000;
 }
 
-.right p {
+.main p {
   opacity: 1;
   margin-left: 10px;
   margin-right: 10px;
@@ -96,7 +70,7 @@ h3 {
   color: #000000;
 }
 
-.right h1 {
+.main h1 {
   opacity: 1;
   margin-left: 10px;
   margin-right: 10px;
