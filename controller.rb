@@ -4,11 +4,13 @@ require( 'pry-byebug' )
 
 require_relative('models/album')
 require_relative('models/artist')
+require_relative('models/stock')
 
 #READ/INDEX
 get '/' do
   @artists = Artist.all()
   @albums = Album.all()
+  @stocks = Stock.all()
   erb(:library)
 end
 
