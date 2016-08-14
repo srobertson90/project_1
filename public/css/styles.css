@@ -95,3 +95,7 @@ li {
   flex-direction: column;
   padding: 20px;
 }
+
+.resizedtextbox {
+  width: 25px;
+}
