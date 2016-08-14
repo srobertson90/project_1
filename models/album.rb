@@ -14,15 +14,15 @@ class Album
   end
 
   def save()
-    sql = "INSERT INTO albums (name, artist_id) VALUES ('#{ @name }', #{ @artist_id }) RETURNING *"
+    sql = "INSERT INTO albums (name, artist_id) VALUES ('#{@name}', #{@artist_id}) RETURNING *"
     album = SqlRunner.run(sql).first
     @id = album['id']
   end
 
   def artist()
-    sql = "SELECT * FROM artists WHERE id = #{ @artist_id }"
-    artist = SqlRunner.run(sql)
-    result = Artist.new(artist.first)
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
+    artist = SqlRunner.run(sql).first
+    result = Artist.new(artist)
     return result
   end
 
@@ -34,9 +34,9 @@ class Album
   end
 
   def stock()
-    sql = "SELECT * FROM stocks WHERE album_id = #{ @id }"
+    sql = "SELECT * FROM stocks WHERE album_id = #{@id}"
     stocks = SqlRunner.run(sql)
-    result = stocks.map { |a| Stock.new(a) }
+    result = stocks.map {|a| Stock.new(a)}
     return result
   end
 
