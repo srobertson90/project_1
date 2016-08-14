@@ -1,11 +1,17 @@
 <% @artists.each do |artist| %>
-  <p><b>Artist:</b> <%= artist.name %></p>
+  <b>Artist:</b> <%= artist.name %>
   
-  <p><b>Albums:</b> 
+  <p><b>Albums:</b></p>
   <ul><% @albums.each do |album| %>
     <% if artist.id == album.artist_id %>
       <li><%= album.name %></li>
-    <% end %></p>
+      <p><b>Stock:</b> 
+      <% @stocks.each do |stock| %>
+        <% if album.id == stock.album_id %>
+          <p><%= stock.format %> | <%= stock.stock_level %> | <%= stock.threshold  %> | <%= stock.buy_price %> | <%= stock.sell_price %></p>
+        <% end %>
+        <% end %>
+    <% end %>
   <% end %>
 </ul>
   <form action="/album/new" method="post">

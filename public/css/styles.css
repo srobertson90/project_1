@@ -29,6 +29,7 @@ h3 {
 #header h3 {
 
   color: #000000;
+  text-align: center;
 }
 
 #links{
@@ -44,9 +45,9 @@ h3 {
   opacity: 0.80;
   position: relative;
   float: left;
-  margin-left: 2%;
+  margin-left: 10%;
   margin-top: 50px;
-  width: 70%;
+  width: 80%;
   height: 800px;
   background-color: #ffffff;
   margin-bottom: 10px;
@@ -54,7 +55,7 @@ h3 {
 
 .main form {
   opacity: 1;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
   margin-top: 10px;
   font-family: Garamond, serif;
@@ -63,11 +64,14 @@ h3 {
 
 .main p {
   opacity: 1;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-left: 20px;
   font-family: Garamond, serif;
   color: #000000;
+}
+
+.main ul {
+  margin-left: 20px;
+
 }
 
 .main h1 {
