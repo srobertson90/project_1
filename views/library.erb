@@ -1,9 +1,9 @@
 <ul><% @artists.each do |artist| %>
-  <%= artist.name %>
+  <div class="artist_div"><b><%= artist.name %></b>
   
   <ul><% @albums.each do |album| %>
     <% if artist.id == album.artist_id %>
-      <li><%= album.name %></li>
+      <li><i><%= album.name %></i></li>
 
         <% @stocks.each do |stock| %>
           <% if album.id == stock.album_id %>
@@ -15,6 +15,6 @@
     <% end %>
 
 </ul>
-<hr>
+</div>
 <% end %>
 </ul>

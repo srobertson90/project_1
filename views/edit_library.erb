@@ -1,5 +1,5 @@
-<% @artists.each do |artist| %>
-  <%= artist.name %>
+<ul><% @artists.each do |artist| %>
+  <div class="artist_div"><b><%= artist.name %></b>
   
   <ul><% @albums.each do |album| %>
     <% if artist.id == album.artist_id %>
@@ -16,6 +16,10 @@
             <option value="<%= album.id %>"><%= album.name %></option>
           </select>
           <!-- Format: < -->
+          Format: <select name="format">
+            <option value = "CD">CD</option>
+            <option value="Vinyl">Vinyl</option>
+          </select>
           Quantity: <input type='number' name="stock level" min="0" max ="20">
           <input type='submit' value="Add Stock">
         </form>
@@ -30,11 +34,18 @@
     </select>
     <input type='submit' value="Add Album">
   </form>
+
   </ul>
-  <hr>
+ </div>
 <% end %>
 
+</ul>
+
+<ul><div class= "artist_div">
 <form action="/artist/new" method="post">
   <input type="text" name="name">
   <input type='submit' value="Add Artist">
 </form>
+</div></ul>
+
+</ul>

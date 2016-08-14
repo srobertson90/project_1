@@ -1,8 +1,5 @@
 body {
-  background: url('https://d1hw6n3yxknhky.cloudfront.net/011628431_prevstill.jpeg');
-  background-size: 1200px 600px;
-  background-image: no-repeat;
-  background-attachment: fixed;
+  background-color: #4F640A;
 }
 
 h3 {
@@ -18,25 +15,26 @@ li {
   list-style-type: none;
 }
 
-#header {
+.header {
   border-radius: 10px;
   z-index: 1;
   position: fixed;
-  width: 97.5%;
+  width: 85%;
+  margin-left: 6.5%;
   margin-top: -20px;
   height: 70px;
-  background-color: #33E0E3;
+  background-color: #B3C773;
   margin-bottom: 10px;
 
 }
 
-#header h3 {
+.header h3 {
 
   color: #000000;
   text-align: center;
 }
 
-#links{
+.links{
   float:right;
   margin-right: 25px;
   padding-top: 5px;
@@ -46,7 +44,6 @@ li {
 }
 
 .main {
-  opacity: 0.95;
   position: relative;
   float: left;
   margin-left: 10%;
@@ -54,10 +51,11 @@ li {
   width: 80%;
   display: flex;
   flex-direction: column;
-  min-height: 85vh;
+  min-height: 87.8vh;
   /*height: 800px;*/
-  background-color: #ffffff;
+  background-color: #819837;
   margin-bottom: 10px;
+  font-size: 120%;
 }
 
 .main form {
@@ -70,16 +68,13 @@ li {
 }
 
 .main p {
+
   opacity: 1;
   margin-left: 20px;
+  font-size: 200%;
   font-family: Garamond, serif;
   color: #000000;
 }
-
-/*.main ul {
-  margin-left: 10px;
-
-}*/
 
 .main h1 {
   opacity: 1;
@@ -88,4 +83,15 @@ li {
   margin-top: 10px;
   font-family: Garamond, serif;
   color: #000000;
+}
+
+.artist_div {
+  border-radius: 10px;
+  margin-bottom: 25px;
+  float:center;
+  background-color: #B3C773;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
