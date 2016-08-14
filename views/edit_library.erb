@@ -1,27 +1,35 @@
 <% @artists.each do |artist| %>
-  <b>Artist:</b> <%= artist.name %>
+  <%= artist.name %>
   
-  <p><b>Albums:</b></p>
   <ul><% @albums.each do |album| %>
     <% if artist.id == album.artist_id %>
       <li><%= album.name %></li>
-      <p><b>Stock:</b> 
-      <% @stocks.each do |stock| %>
-        <% if album.id == stock.album_id %>
-          <p><%= stock.format %> | <%= stock.stock_level %> | <%= stock.threshold  %> | <%= stock.buy_price %> | <%= stock.sell_price %></p>
+
+        <% @stocks.each do |stock| %>
+          <% if album.id == stock.album_id %>
+            <%= stock.format %> | <%= stock.stock_level %> | <%= stock.threshold  %> | <%= stock.buy_price %> | <%= stock.sell_price %>
+          <% end %>
         <% end %>
-        <% end %>
+
+        <form action="/stock/new" method="post">
+          <input type="text" name="name">
+          <select name="album_id" style='display:none'>
+            <option value="<%= album.id %>"><%= album.name %></option>
+          </select>
+          <input type='submit' value="Add Stock">
+        </form>
+      
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+
   <form action="/album/new" method="post">
     <input type="text" name="name">
-      <select name="artist_id" style='display:none'>
-        <option value="<%= artist.id %>"><%= artist.name %></option>
-      </select>
+    <select name="artist_id" style='display:none'>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
+    </select>
     <input type='submit' value="Add Album">
   </form>
-
+  </ul>
   <hr>
 <% end %>
 
