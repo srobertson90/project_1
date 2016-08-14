@@ -5,7 +5,7 @@ require_relative('artist')
 
 class Album
 
-  attr_reader(:id, :name, :artist_id, :genre)
+  attr_reader(:id, :name, :artist_id)
 
   def initialize(options)
     @id = options['id'].to_i

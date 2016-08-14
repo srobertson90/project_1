@@ -1,12 +1,11 @@
 require('minitest/autorun')
 require('minitest/rg')
-require_relative('../models/artist')
+require_relative('../models/album')
 
 class TestAlbum < MiniTest::Test
 
 def setup
-  artist1 = Artist.new( { 'name' => 'Amon Amarth' } )
-  @album1 = Album.new( { 'name' => 'Jomsviking', 'artist_id' => artist1.id } )
+  @album1 = Album.new( { 'name' => 'Jomsviking' } )
 end
 
 def test_name
