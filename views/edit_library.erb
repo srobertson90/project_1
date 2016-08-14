@@ -12,10 +12,11 @@
         <% end %>
 
         <form action="/stock/new" method="post">
-          <input type="text" name="name">
           <select name="album_id" style='display:none'>
             <option value="<%= album.id %>"><%= album.name %></option>
           </select>
+          <!-- Format: < -->
+          Quantity: <input type='number' name="stock level" min="0" max ="20">
           <input type='submit' value="Add Stock">
         </form>
       
