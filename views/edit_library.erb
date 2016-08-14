@@ -7,7 +7,7 @@
 
         <ul><% @stocks.each do |stock| %>
           <% if album.id == stock.album_id %>
-            <li><%= stock.format %> | <%= stock.stock_level %> | <%= stock.threshold  %> | <%= stock.buy_price %> | <%= stock.sell_price %></li>
+            <li>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: <%= stock.buy_price %> | Sell: <%= stock.sell_price %></li>
           <% end %>
         <% end %>
         </ul>
