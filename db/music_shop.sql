@@ -1,6 +1,6 @@
+DROP TABLE stocks;
 DROP TABLE albums;
 DROP TABLE artists;
-DROP TABLE stocks;
 
 CREATE TABLE artists (
   id serial4 PRIMARY KEY,
