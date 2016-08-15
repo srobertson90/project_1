@@ -11,7 +11,7 @@ get '/library/' do
   @artists = Artist.all()
   @albums = Album.all()
   @stocks = Stock.all()
-  erb(:library)
+  erb(:library_with_pictures)
 end
 
 #CREATE

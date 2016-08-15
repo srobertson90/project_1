@@ -1,0 +1,25 @@
+<ul><% @artists.each do |artist| %>
+  <div class="artist_div"><h3><%= artist.name %></h3>
+  
+  <div class="album_div">
+    <ul><% @albums.each do |album| %>
+    <div class="album_cover"><img src="/images/placeholder.png"></div>
+      <div class="album_details"><% if artist.id == album.artist_id %>
+        <li><h4><%= album.name %></h4></li>
+
+          <% @stocks.each do |stock| %>
+            <% if album.id == stock.album_id %>
+              <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: <%= stock.buy_price %> | Sell: <%= stock.sell_price %></p>
+            <% end %>
+          <% end %>
+
+        <% end %>
+      <% end %>
+    </div>
+    </ul>
+  </div>
+    
+
+  </div>
+<% end %>
+</ul>
