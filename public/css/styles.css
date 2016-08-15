@@ -104,6 +104,15 @@ li {
   padding: 20px;
 }
 
+.album_div {
+  background-color: #4F640A;
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+
+}
+
 .album_cover {
   width: 200px;
   height: 200px;
@@ -112,6 +121,7 @@ li {
 }
 
 .album_details {
+  /*background-color: #4F640A;*/
   width: 60%;
   height: 200px;
   position: relative;
