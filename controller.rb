@@ -18,21 +18,21 @@ end
 post '/artist/new' do 
   @artist = Artist.new(params)
   @artist.save() 
-  redirect(to('/library/'))
+  redirect(to('/library/edit/'))
 end
 
 #CREATE
 post '/album/new' do
   @album = Album.new(params)
   @album.save
-  redirect(to('/library/'))
+  redirect(to('/library/edit/'))
 end
 
 #CREATE
 post '/stock/new' do
   @stock = Stock.new(params)
   @stock.save
-  redirect(to('/library/'))
+  redirect(to('/library/edit/'))
 end
 
 #READ

@@ -15,7 +15,7 @@ class Album
   end
 
   def save()
-    sql = "INSERT INTO albums (name, artist_id) VALUES ('#{@name}', #{@artist_id}) RETURNING *"
+    sql = "INSERT INTO albums (name, artist_id, cover) VALUES ('#{@name}', #{@artist_id}, '#{@cover}') RETURNING *"
     album = SqlRunner.run(sql).first
     @id = album['id']
   end

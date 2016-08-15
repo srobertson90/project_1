@@ -2,15 +2,27 @@
   <div class="artist_div"><h3><%= artist.name %></h3>
   
   <ul><% @albums.each do |album| %><div class="album_div">
-    <% cover = "placeholder" if album.cover == nil %>
+    <!-- <% if album.cover == nil %>
+      <% cover = "placeholder" %>
+    <% else %>
+      <% cover = album.cover %>
+    <% end %> -->
 
-    <div class="album_cover"><img src="/images/<%= cover %>.jpg"></div>
-      <div class="album_details"><% if artist.id == album.artist_id %>
-        <li><h4><%= album.name %></h4></li>
+    <div class="album_cover">
+      <!-- <img src="/images/<%= cover %>.jpg"> -->
+      <object data="/images/<%= cover %>.jpg" type="image/jpg">
+        <img src="/images/placeholder.jpg" />
+      </object>
+    </div> 
+    
+      <% if artist.id == album.artist_id %>
+       
+
+        <div class="album_details"><li><h4><%= album.name %></h4></li>
 
         <% @stocks.each do |stock| %>
           <% if album.id == stock.album_id %>
-            <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: <%= stock.buy_price %> | Sell: <%= stock.sell_price %></p>
+            <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: £<%= stock.buy_price %> | Sell: £<%= stock.sell_price %></p>
           <% end %> <!-- ending stock if -->
         <% end %> <!-- ending stock for loop -->
 

@@ -31,10 +31,11 @@
     <% end %>
 
   <form action="/album/new" method="post">
-    <input type="text" name="name">
+    Name: <input type="text" name="name">
     <select name="artist_id" style='display:none'>
       <option value="<%= artist.id %>"><%= artist.name %></option>
     </select>
+    Cover: <input type="text" name="cover">
     <input type='submit' value="Add Album">
   </form>
 
