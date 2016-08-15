@@ -10,20 +10,16 @@
           <% if album.id == stock.album_id %>
             <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: <%= stock.buy_price %> | Sell: <%= stock.sell_price %></p>
           <% end %> <!-- ending stock if -->
-        <% end %> <!-- ending stock do -->
+        <% end %> <!-- ending stock for loop -->
 
       <% end %> <!-- ending album if -->
       </div> <!-- closing album_details div -->
-      
+
     </div> <!-- closing album_div div -->
-    <% end %> <!-- ending album do -->
-    </ul>
-    
-    
+    <% end %> <!-- ending album for loop -->
+    </ul> <!-- ending album list -->
 
-  </div>
-    
+  </div> <!-- closing artist_div div -->
 
-  </div>
-<% end %>
-</ul>
+<% end %> <!-- closing artist for loop -->
+</ul> <!-- closing artist list -->

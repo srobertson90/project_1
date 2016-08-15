@@ -105,7 +105,7 @@ li {
 }
 
 .album_div {
-  background-color: #4F640A;
+  background-color: blue;
   position:relative;
   display: flex;
   flex-direction: column;
@@ -121,7 +121,7 @@ li {
 }
 
 .album_details {
-  /*background-color: #4F640A;*/
+  background-color: red;
   width: 60%;
   height: 200px;
   position: relative;
