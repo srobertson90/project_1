@@ -11,6 +11,7 @@ CREATE TABLE artists (
 CREATE TABLE albums (
   id serial4 PRIMARY KEY,
   name VARCHAR(255),
+  cover VARCHAR(255),
   artist_id int4 REFERENCES artists(id) ON DELETE CASCADE
 );
 
