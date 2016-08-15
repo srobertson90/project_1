@@ -2,7 +2,9 @@
   <div class="artist_div"><h3><%= artist.name %></h3>
   
   <ul><% @albums.each do |album| %><div class="album_div">
-    <div class="album_cover"><img src="/images/placeholder.jpg"></div>
+    <% cover = "placeholder" if album.cover == nil %>
+
+    <div class="album_cover"><img src="/images/<%= cover %>.jpg"></div>
       <div class="album_details"><% if artist.id == album.artist_id %>
         <li><h4><%= album.name %></h4></li>
 
