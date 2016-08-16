@@ -9,18 +9,37 @@
 
       <div class="album_cover">
         <object data="/images/covers/<%= album.cover %>.jpg" type="image/jpg">
-          <img src="/images/placeholder.jpg" />
+          <img src="/images/covers/placeholder.jpg" />
         </object>
       </div> 
        
       <div class="album_details">
         <li><h4><%= album.name %></h4></li>
+        <table style="width:80%">
+
+          <tr>
+            <th>Format</th>
+            <th>Stock Level</th> 
+            <th>Optimal</th>
+            <th>Buy Price</th>
+            <th>Sell Price</th>
+          </tr>
 
         <% @stocks.each do |stock| %>
           <% if album.id == stock.album_id %>
-            <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: £<%= stock.buy_price %> | Sell: £<%= stock.sell_price %></p>
+
+          <tr>
+            <td><%= stock.format %></td>
+            <td><%= stock.stock_level %></td>
+            <td><%= stock.threshold %></td>
+            <td><%= stock.buy_price %></td>
+            <td><%= stock.sell_price %></td>
+          </tr>
+
+            <!-- <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: £<%= stock.buy_price %> | Sell: £<%= stock.sell_price %></p> -->
           <% end %> <!-- ending stock if -->
         <% end %> <!-- ending stock for loop -->
+        </table>
       
       </div> <!-- closing album_details div -->
     </div> <!-- closing album_div -->
