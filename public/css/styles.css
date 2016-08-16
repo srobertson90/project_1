@@ -81,6 +81,10 @@ li {
   font-size: 110%;
 }
 
+.main td {
+  text-align: center;
+}
+
 .main h1 {
   opacity: 1;
   margin-left: 10px;
