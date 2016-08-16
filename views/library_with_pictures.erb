@@ -25,7 +25,7 @@
             <th>Sell Price</th>
           </tr>
 
-        <% @stocks.each do |stock| %>
+          <% @stocks.each do |stock| %>
           <% if album.id == stock.album_id %>
 
           <tr>
@@ -35,16 +35,16 @@
             <td><%= stock.buy_price %></td>
             <td><%= stock.sell_price %></td>
           </tr>
+         <!--  <%= ((stock.album).artist).name %> -->
 
-            <!-- <p>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: £<%= stock.buy_price %> | Sell: £<%= stock.sell_price %></p> -->
-          <% end %> <!-- ending stock if -->
+        <% end %> <!-- ending stock if -->
         <% end %> <!-- ending stock for loop -->
         </table>
       
-      </div> <!-- closing album_details div -->
+    </div> <!-- closing album_details div -->
     </div> <!-- closing album_div -->
 
-    <% end %> <!-- ending album if -->
+  <% end %> <!-- ending album if -->
   <% end %> <!-- ending album for loop -->
   </ul> <!-- ending album list -->
 

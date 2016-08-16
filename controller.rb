@@ -24,6 +24,11 @@ end
 #CREATE
 post '/album/new' do
   @album = Album.new(params)
+
+  artist = (((@album.artist).name).downcase.gsub(/\s+/, ""))[0,4]
+  album_name = (@album.name).downcase.split.map(&:chr).join
+  @album.cover = "#{artist}_#{album_name}" 
+
   @album.save
   redirect(to('/library/edit/'))
 end
