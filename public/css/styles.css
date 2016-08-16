@@ -22,13 +22,11 @@ li {
   width: 7%;
   height: 97%;
   background-color: #B3C773;
-
 }
 
-.header h3 {
-
-  color: #000000;
-  text-align: center;
+.header img {
+  margin-left: 5px;
+  margin-top: 15px;
 }
 
 .links{
@@ -53,15 +51,17 @@ li {
   background-color: #819837;
   margin-bottom: 10px;
   font-size: 120%;
+  padding-bottom: -200px;
 }
 
 .main form {
   opacity: 1;
   margin-left: 20px;
   margin-right: 10px;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   font-family: Garamond, serif;
   color: #000000;
+/*  padding-bottom: 50px;*/
 }
 
 .main p {
