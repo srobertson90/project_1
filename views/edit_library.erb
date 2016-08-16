@@ -53,9 +53,7 @@
           <td><input type='number' name="threshold" class="resizedtextbox"></td>
           <td><input type='number' name="buy_price" class="resizedtextbox"></td>
           <td><input type='number' name="sell_price" class="resizedtextbox"></td>
-          
           </tr>
-
 
         </table>
         <input type='submit' value="Add Stock">
@@ -80,12 +78,11 @@
 </div> <!-- closing artist_div -->
 <% end %> <!-- closing artist for loop -->
 
-<ul><div class= "artist_div">
+<div class= "artist_div">
 <form action="/artist/new" method="post">
   <input type="text" name="name">
   <input type='submit' value="Add Artist">
 </form>
-</div></ul>
+</div>
 
 </ul> <!-- closing artist list -->
-</ul>
