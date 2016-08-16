@@ -65,7 +65,7 @@
   <% end %> <!-- ending album if -->
   <% end %> <!-- ending album for loop -->
 
-  <form action="/album/new" method="post">
+  <form action="/album/new" method="post" style='margin-left:-30px'>
     Name: <input type="text" name="name">
     <select name="artist_id" style='display:none'>
       <option value="<%= artist.id %>"><%= artist.name %></option>
