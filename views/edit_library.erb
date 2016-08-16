@@ -1,34 +1,71 @@
 <ul><% @artists.each do |artist| %>
-  <div class="artist_div"><b><%= artist.name %></b>
+  <div class="artist_div">
+  <h3><%= artist.name %></h3>
   
   <ul><% @albums.each do |album| %>
+    
     <% if artist.id == album.artist_id %>
-      <li><%= album.name %></li>
+    <div class="album_div">
 
-        <ul><% @stocks.each do |stock| %>
+      <div class="album_cover">
+        <object data="/images/covers/<%= album.cover %>.jpg" type="image/jpg">
+          <img src="/images/covers/placeholder.jpg" />
+        </object>
+      </div> 
+       
+      <div class="album_details">
+        <li><h4><%= album.name %></h4></li>
+        <table style="width:80%">
+
+          <tr>
+            <th>Format</th>
+            <th>Stock Level</th> 
+            <th>Optimal</th>
+            <th>Buy Price</th>
+            <th>Sell Price</th>
+          </tr>
+
+          <% @stocks.each do |stock| %>
           <% if album.id == stock.album_id %>
-            <li>Format: <%= stock.format %> | Stock: <%= stock.stock_level %> | Optimal: <%= stock.threshold  %> | Buy: <%= stock.buy_price %> | Sell: <%= stock.sell_price %></li>
-          <% end %>
-        <% end %>
-        </ul>
+
+          <tr>
+            <td><%= stock.format %></td>
+            <td><%= stock.stock_level %></td>
+            <td><%= stock.threshold %></td>
+            <td><%= stock.buy_price %></td>
+            <td><%= stock.sell_price %></td>
+          </tr>
+         <!--  <%= ((stock.album).artist).name %> -->
+
+        <% end %> <!-- ending stock if -->
+        <% end %> <!-- ending stock for loop -->
 
         <form action="/stock/new" method="post">
           <select name="album_id" style='display:none'>
             <option value="<%= album.id %>"><%= album.name %></option>
           </select>
-          Format: <select name="format">
+          <tr>
+          <td><select name="format">
             <option value = "CD">CD</option>
             <option value="Vinyl">Vinyl</option>
-          </select>
-          No. of: <input type='number' name="stock_level" class="resizedtextbox">
-          Optimum: <input type='number' name="threshold" class="resizedtextbox">
-          Buy: <input type='number' name="buy_price" class="resizedtextbox">
-          Sell: <input type='number' name="sell_price" class="resizedtextbox">
-          <input type='submit' value="Add Stock">
+          </select></td>
+          <td><input type='number' name="stock_level" class="resizedtextbox"></td>
+          <td><input type='number' name="threshold" class="resizedtextbox"></td>
+          <td><input type='number' name="buy_price" class="resizedtextbox"></td>
+          <td><input type='number' name="sell_price" class="resizedtextbox"></td>
+          
+          </tr>
+
+
+        </table>
+        <input type='submit' value="Add Stock">
         </form>
       
-      <% end %>
-    <% end %>
+    </div> <!-- closing album_details div -->
+    </div> <!-- closing album_div -->
+
+  <% end %> <!-- ending album if -->
+  <% end %> <!-- ending album for loop -->
 
   <form action="/album/new" method="post">
     Name: <input type="text" name="name">
@@ -38,11 +75,10 @@
     <input type='submit' value="Add Album">
   </form>
 
-  </ul>
- </div>
-<% end %>
+  </ul> <!-- ending album list -->
 
-</ul>
+</div> <!-- closing artist_div -->
+<% end %> <!-- closing artist for loop -->
 
 <ul><div class= "artist_div">
 <form action="/artist/new" method="post">
@@ -51,4 +87,5 @@
 </form>
 </div></ul>
 
+</ul> <!-- closing artist list -->
 </ul>
