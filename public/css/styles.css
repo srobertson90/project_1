@@ -3,15 +3,6 @@ body {
   color: #FFFFFF;
 }
 
-/*h3 {
-  position: relative;
-  padding-bottom: 15px;
-  font-family: Verdana, sans-serif;
-  font-size: 24px;
-  text-align: center;
-  color: #ffffff;
-}*/
-
 li {
   list-style-type: none;
 }
@@ -32,16 +23,7 @@ li {
 
 }
 
-.links{
-  float:right;
-  margin-right: 25px;
-  padding-top: 5px;
-  font-size: 16px;
-  font-family: Verdana, sans-serif;
-  color: #ffffff;
-}
-
-.main {
+.wrapper {
   position: relative;
   float: left;
   margin-left: 10%;
