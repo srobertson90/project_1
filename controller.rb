@@ -32,7 +32,7 @@ get '/library/' do
   @artists = Artist.all()
   @albums = Album.all()
   @stocks = Stock.all()
-  erb(:library_with_pictures)
+  erb(:library)
 end
 
 #CREATE
