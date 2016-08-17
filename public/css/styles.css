@@ -1,5 +1,6 @@
 body {
-  background-color: #235B50;
+  background-color: #232729;
+  color: #FFFFFF;
 }
 
 /*h3 {
@@ -21,7 +22,7 @@ li {
   position: fixed;
   width: 7%;
   height: 97%;
-  background-color: #BD6A5B;
+  background-color: #403A37;
 }
 
 .header img {
@@ -50,7 +51,7 @@ li {
   flex-direction: column;
   min-height: 87.8vh;
   /*height: 800px;*/
-  background-color: #68461D;
+  /*background-color: #68461D;*/
   margin-bottom: 10px;
   font-size: 120%;
   padding-bottom: -200px;
@@ -72,7 +73,6 @@ li {
   /*margin-left: 20px;*/
   /*font-size: 200%;*/
   font-family: Garamond, serif;
-  color: #000000;
 }
 
 .main b {
@@ -100,7 +100,7 @@ li {
   border-radius: 10px;
   margin-bottom: 25px;
   float:center;
-  background-color: #BD905B;
+  background-color: #403A37;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -141,7 +141,7 @@ li {
   margin-left: 2%;
   margin-top: 2%;
   float:center;
-  background-color: #BD905B;
+  background-color: #403A37;
   width: 90%;
   display: flex;
   flex-direction: column;
