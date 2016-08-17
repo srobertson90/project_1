@@ -8,7 +8,6 @@ li {
 }
 
 .header {
-  /*border-radius: 10px;*/
   z-index: 1;
   position: fixed;
   width: 7%;
@@ -27,13 +26,10 @@ li {
   position: relative;
   float: left;
   margin-left: 10%;
-  /*margin-top: 50px;*/
   width: 80%;
   display: flex;
   flex-direction: column;
   min-height: 87.8vh;
-  /*height: 800px;*/
-  /*background-color: #68461D;*/
   margin-bottom: 10px;
   font-size: 120%;
   padding-bottom: -200px;
@@ -43,26 +39,8 @@ li {
   opacity: 1;
   margin-left: 20px;
   margin-right: 10px;
-  /*margin-top: 10px;*/
   font-family: Garamond, serif;
   color: #000000;
-/*  padding-bottom: 50px;*/
-}
-
-.main p {
-
-  opacity: 1;
-  /*margin-left: 20px;*/
-  /*font-size: 200%;*/
-  font-family: Garamond, serif;
-}
-
-.main b {
-  font-size: 120%;
-}
-
-.main i {
-  font-size: 110%;
 }
 
 .main td {
@@ -119,7 +97,6 @@ li {
 
 .table_div {
   border-radius: 10px;
-  /*margin-bottom: 25px;*/
   margin-left: 2%;
   margin-top: 2%;
   float:center;
