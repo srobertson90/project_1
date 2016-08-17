@@ -14,7 +14,13 @@
       </div> 
        
       <div class="album_details">
-        <li><h4><%= album.name %></h4></li>
+        <h4>
+          <%= album.name %>
+          <form action=<%="/album/#{album.id}/delete"%> method="post">
+            <input type='submit' value="Delete">
+          </form>
+        </h4>
+
         <table style="width:100%">
 
           <tr>

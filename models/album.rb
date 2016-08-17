@@ -28,6 +28,13 @@ class Album
     return result
   end
 
+  def stock()
+    sql = "SELECT * FROM stocks WHERE album_id = #{@id}"
+    stocks = SqlRunner.run(sql)
+    result = stocks.map {|a| Stock.new(a)}
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM albums"
     albums = SqlRunner.run(sql)
@@ -35,11 +42,9 @@ class Album
     return result
   end
 
-  def stock()
-    sql = "SELECT * FROM stocks WHERE album_id = #{@id}"
-    stocks = SqlRunner.run(sql)
-    result = stocks.map {|a| Stock.new(a)}
-    return result
+  def self.delete(id)
+    sql = "DELETE FROM albums WHERE id = #{id}"
+    SqlRunner.run(sql)
   end
 
 end
