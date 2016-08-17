@@ -34,4 +34,9 @@ class Artist
     return result
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM artists WHERE id = #{id}"
+    SqlRunner.run(sql)
+  end
+
 end

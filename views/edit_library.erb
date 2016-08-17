@@ -1,6 +1,11 @@
 <ul><% @artists.each do |artist| %>
   <div class="artist_div">
-  <h3><%= artist.name %></h3>
+  <h3>
+    <%= artist.name %>
+    <form action=<%="/artist/#{artist.id}/delete"%> method="post">
+      <input type='submit' value="Delete">
+    </form>
+  </h3>
   
   <ul><% @albums.each do |album| %>
     

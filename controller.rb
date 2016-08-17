@@ -42,6 +42,12 @@ post '/artist/new' do
   redirect(to('/library/edit/'))
 end
 
+#DELETE
+post '/artist/:id/delete' do
+  Artist.delete(params[:id])
+  redirect(to('/library/edit/'))
+end
+
 #CREATE
 post '/album/new' do
   @album = Album.new(params)
