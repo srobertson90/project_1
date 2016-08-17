@@ -1,1 +1,29 @@
-<!-- <div class="artist_div"> -->
+<div class="artist_div">
+<table style="width:80%">
+
+  <tr>
+    <th>Artist</th>
+    <th>Album</th>
+    <th>Format</th>
+    <th>Stock Level</th> 
+    <th>Optimal</th>
+    <th>Buy Price</th>
+    <th>Sell Price</th>
+  </tr>
+
+  <% @stocks.each do |stock| %>
+
+    <tr>
+      <td><%= ((stock.album).artist).name %></td>
+      <td><%= (stock.album).name %></td>
+      <td><%= stock.format %></td>
+      <td><%= stock.stock_level %></td>
+      <td><%= stock.threshold %></td>
+      <td><%= stock.buy_price %></td>
+      <td><%= stock.sell_price %></td>
+    </tr>
+
+  <% end %> <!-- ending stock for loop -->
+
+</table>
+</div>

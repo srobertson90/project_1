@@ -6,6 +6,19 @@ require_relative('models/album')
 require_relative('models/artist')
 require_relative('models/stock')
 
+#HOME
+get '/' do
+  redirect(to('/stock/'))
+end
+
+#READ
+get '/stock/' do
+  @artists = Artist.all()
+  @albums = Album.all()
+  @stocks = Stock.all()
+  erb(:stock)
+end
+
 #READ
 get '/library/' do
   @artists = Artist.all()
