@@ -12,6 +12,7 @@
   </tr>
 
   <% @stocks.each do |stock| %>
+  <% if stock.stock_level > 0 %>
 
     <tr>
       <td><%= ((stock.album).artist).name %></td>
@@ -23,6 +24,7 @@
       <td><%= stock.sell_price %></td>
     </tr>
 
+  <% end %> <!-- ending stock if  -->
   <% end %> <!-- ending stock for loop -->
 
 </table>
