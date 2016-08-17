@@ -61,6 +61,12 @@ post '/stock/new' do
   redirect(to('/library/edit/'))
 end
 
+#DELETE
+post '/stock/:id/delete' do
+  Stock.delete(params[:id])
+  redirect(to('/library/edit/'))
+end
+
 #READ
 get '/library/edit/' do
   @artists = Artist.all()

@@ -15,7 +15,7 @@
        
       <div class="album_details">
         <li><h4><%= album.name %></h4></li>
-        <table style="width:80%">
+        <table style="width:100%">
 
           <tr>
             <th>Format</th>
@@ -34,6 +34,9 @@
             <td><%= stock.threshold %></td>
             <td><%= stock.buy_price %></td>
             <td><%= stock.sell_price %></td>
+            <td><form action=<%="/stock/#{stock.id}/delete"%> method="post">
+              <input type='submit' value="Delete">
+            </form></td>
           </tr>
 
         <% end %> <!-- ending stock if -->
@@ -44,18 +47,18 @@
             <option value="<%= album.id %>"><%= album.name %></option>
           </select>
           <tr>
-          <td><select name="format">
-            <option value = "CD">CD</option>
-            <option value="Vinyl">Vinyl</option>
-          </select></td>
-          <td><input type='number' name="stock_level" class="resizedtextbox"></td>
-          <td><input type='number' name="threshold" class="resizedtextbox"></td>
-          <td><input type='number' name="buy_price" class="resizedtextbox"></td>
-          <td><input type='number' name="sell_price" class="resizedtextbox"></td>
+            <td><select name="format">
+              <option value = "CD">CD</option>
+              <option value="Vinyl">Vinyl</option>
+            </select></td>
+            <td><input type='number' name="stock_level" class="resizedtextbox"></td>
+            <td><input type='number' name="threshold" class="resizedtextbox"></td>
+            <td><input type='number' name="buy_price" class="resizedtextbox"></td>
+            <td><input type='number' name="sell_price" class="resizedtextbox"></td>
+            <td><input type='submit' value="Add"></td>
           </tr>
 
         </table>
-        <input type='submit' value="Add Stock">
         </form>
       
     </div> <!-- closing album_details div -->

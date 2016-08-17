@@ -43,11 +43,11 @@ li {
   color: #000000;
 }
 
-.main td {
+.wrapper td {
   text-align: center;
 }
 
-.main h1 {
+.wrapper h1 {
   opacity: 1;
   margin-left: 10px;
   margin-right: 10px;

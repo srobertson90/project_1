@@ -38,4 +38,9 @@ class Stock
     return result
   end
 
+  def self.delete(id)
+    sql = "DELETE FROM stocks WHERE id = #{id}"
+    SqlRunner.run(sql)
+  end
+
 end
