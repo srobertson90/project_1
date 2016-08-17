@@ -19,7 +19,6 @@ li {
   margin-left: 5%;
   margin-top: 15px;
   width: 90%;
-
 }
 
 .wrapper {
@@ -31,8 +30,7 @@ li {
   flex-direction: column;
   min-height: 87.8vh;
   margin-bottom: 10px;
-  font-size: 120%;
-  padding-bottom: -200px;
+  /*font-size: 120%;*/
 }
 
 .main form {
@@ -86,7 +84,7 @@ li {
 .album_details {
   position: relative;
   float: right;
-  width: 60%;
+  width: 70%;
   height: 200px;
   /*background-color: red;*/
 }
@@ -101,7 +99,7 @@ li {
   margin-top: 2%;
   float:center;
   background-color: #403A37;
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   padding: 20px;

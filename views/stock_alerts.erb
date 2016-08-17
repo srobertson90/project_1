@@ -13,7 +13,7 @@
   </tr>
 
   <% @stocks.each do |stock| %>
-  <% if stock.stock_level <= stock.threshold %>
+  <% if 0 < stock.stock_level && stock.stock_level < stock.threshold %>
 
 
     <tr>
