@@ -20,6 +20,14 @@ get '/stock/' do
 end
 
 #READ
+get '/stock/alerts/' do
+  @artists = Artist.all()
+  @albums = Album.all()
+  @stocks = Stock.all()
+  erb(:stock_alerts)
+end
+
+#READ
 get '/library/' do
   @artists = Artist.all()
   @albums = Album.all()

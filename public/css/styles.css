@@ -134,3 +134,16 @@ li {
 .resizedtextbox {
   width: 25px;
 }
+
+.table_div {
+  border-radius: 10px;
+  /*margin-bottom: 25px;*/
+  margin-left: 2%;
+  margin-top: 2%;
+  float:center;
+  background-color: #BD905B;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
